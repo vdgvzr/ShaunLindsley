@@ -1,0 +1,22 @@
+dateModified: 1677354086
+email:
+  fromEmail: shaunlindsley@gmail.com
+  fromName: 'Shaun Lindsley'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4786f2a6-b9b0-4978-8fcc-323833d5e36f: Common # Common
+    7162fa47-850d-49b0-96fb-8605f22c2caf: 'Shaun Lindsley' # Shaun Lindsley
+    af0767db-5956-4eaa-9fdd-62f6302fe39c: 'Shaun Lindsley' # Shaun Lindsley
+system:
+  edition: solo
+  live: true
+  name: 'Shaun Lindsley'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
