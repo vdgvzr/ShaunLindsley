@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: about
+name: About
+propagationMethod: all
+siteSettings:
+  af0767db-5956-4eaa-9fdd-62f6302fe39c: # Shaun Lindsley
+    enabledByDefault: true
+    hasUrls: true
+    template: index.twig
+    uriFormat: about
+type: single

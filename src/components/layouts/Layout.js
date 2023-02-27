@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../globals/Nav';
 import Footer from '../globals/Footer';
 
-const Layout = ({ children, site }) => {
+const Layout = ({ children, site, contact }) => {
     return (
         <div className="">
             <div className="">
@@ -13,7 +13,11 @@ const Layout = ({ children, site }) => {
                     {children}
                 </main>
                 <footer className="">
-                    <Footer pages={site?.pages || []} footerText={site?.footerText} />
+                    <Footer
+                        pages={site?.pages || []}
+                        footerText={site?.footerText} 
+                        contact={contact?.emailAddress}
+                    />
                 </footer>
             </div>
         </div>

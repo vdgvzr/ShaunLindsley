@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = ({ pages, footerText }) => {
+const Footer = ({ pages, footerText, contact }) => {
     return (
         <div className="container">
             <footer className="py-3 my-4">
@@ -16,6 +16,7 @@ const Footer = ({ pages, footerText }) => {
                     })}
                 </ul>
                 <p className="text-center text-muted">{footerText}</p>
+                <p className="text-center text-muted">{contact}</p>
             </footer>
         </div>  
     );

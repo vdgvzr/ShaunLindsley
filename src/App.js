@@ -1,40 +1,64 @@
-import React, { useState, useEffect } from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import Layout from './components/layouts/Layout';
 import Page from './components/pages/Page';
 
-const App = () => {
-    const [page, setPage] = useState(null);
-    const [site,setSite] = useState(null);
+var $ = require('jquery');
+window.jQuery = $;
+window.$ = $;
 
-    const path = window.location.pathname;
-    const query = window.location.search;
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-    /* Get site globals */
-    useEffect(() => {
+        this.state = {
+            loading: true,
+            site: null,
+            contact: null,
+            page: null
+        }
+
+        this.path = window.location.pathname;
+        this.query = window.location.search;
+    }
+
+    componentDidMount() {
+        /* Get site globals */
         axios.get("/site.json").then((response) => {
             console.log(response.data);
-            setSite(response.data);
+            const site = response.data;
+            this.setState({ site });
         }).catch((error) => {
             console.error(error.message);
         });
-    }, []);
 
-    /* Get singles */
-    useEffect(() => {
-        axios.get(path + '.json' + query).then((response) => {
-            console.log(response.data)
-            setPage(response.data);
+        axios.get("/contact.json").then((response) => {
+            console.log(response.data);
+            const contact = response.data;
+            this.setState({ contact });
         }).catch((error) => {
-            console.error(error.message)
+            console.error(error.message);
         });
-    }, [path, query]);
 
-    return (
-        <Layout site={site}>
-            <Page page={page} />
-        </Layout>
-    )
+        /* Get singles */
+        axios.get(this.path + '.json' + this.query).then((response) => {
+            console.log(response.data);
+            const page = response.data;
+            this.setState({ page });
+        }).catch((error) => {
+            console.error(error.message);
+        });
+    }
+    render() {
+        return (
+            <Layout 
+                site={this.state.site}
+                contact={this.state.contact}
+            >
+                <Page page={this.state.page} />
+            </Layout>
+        )
+    }
 }
 
 export default App

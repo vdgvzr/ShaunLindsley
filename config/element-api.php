@@ -51,6 +51,7 @@ return [
                 ],
             ];
         },
+
         // Contact info
         // =========================================================================
         'contact.json' => function() {
@@ -69,6 +70,7 @@ return [
                 ],
             ];
         },
+
         /** 
          * Singles
          */
@@ -83,6 +85,26 @@ return [
                     return [
                         'title' => $entry->title,
                         'homepageHeader' => $entry->homepageHeader,
+                    ];
+                },
+                'pretty' => true,
+                'one' => true,
+                'meta' => [
+                    'type' => 'page'
+                ],
+            ];
+        },
+
+        // About
+        // =========================================================================
+        '<about.json>'  => function() {
+            return[
+                'elementType' => 'craft\elements\Entry',
+                'criteria' => ['slug' => 'about'],
+                'transformer' => function(Entry $entry) {
+                    return [
+                        'title' => $entry->title,
+                        'text' => $entry->text->getParsedContent(),
                     ];
                 },
                 'pretty' => true,

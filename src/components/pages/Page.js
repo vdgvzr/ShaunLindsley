@@ -6,7 +6,14 @@ const Page = ({ page }) => {
 
         switch (page?.meta?.type) {
             case 'page':
-                return <div>Page</div>
+                switch (page.title) {
+                    case 'Home':
+                        return <div>{page.homepageHeader}</div>
+                    case 'About':
+                        return <div>{page.text}</div>
+                    default:
+                        console.error('Unknown page.');
+                }
             default:
                 console.error('Unknown content type.');
         }

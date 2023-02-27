@@ -1,4 +1,4 @@
-dateModified: 1677522171
+dateModified: 1677527568
 email:
   fromEmail: shaunlindsley@gmail.com
   fromName: 'Shaun Lindsley'
@@ -14,6 +14,8 @@ fs:
 meta:
   __names__:
     6c4fbce3-00fb-468b-b92b-bf85829b2846: Home # Home
+    7d3d5189-1aef-4b0c-a581-ffd296db1616: About # About
+    8f75332b-ac8d-4234-8499-fad16d02710c: Text # Text
     0179b7b4-dd3b-4ffd-ba09-0359e93357ef: Headers # Headers
     2302dd73-4e04-4686-b1c6-714f442ea962: Images # Images
     4786f2a6-b9b0-4978-8fcc-323833d5e36f: Common # Common
@@ -26,6 +28,7 @@ meta:
     af0767db-5956-4eaa-9fdd-62f6302fe39c: 'Shaun Lindsley' # Shaun Lindsley
     b20393e4-a769-4f44-8bde-5b163bbb797b: Logo # Logo
     c06e6a26-769b-485c-98b1-56a73b146893: 'Email Address' # Email Address
+    d0ab95d8-36bf-4069-a5d7-1e743f36c411: About # About
     f57cbeff-f9f6-4487-bf7a-3dcf0bdcee7f: 'Contact Info' # Contact Info
 plugins:
   element-api:
