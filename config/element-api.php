@@ -3,7 +3,10 @@
 use craft\elements\Entry;
 use craft\elements\GlobalSet;
 use craft\helpers\UrlHelper;
+use craft\helpers\ArrayHelper;
+use craft\models\Section;
 
+$pageInfos = [];
 
 return [
     'endpoints' => [
@@ -20,7 +23,23 @@ return [
                 'transformer' => function(GlobalSet $entry) {
                     $logo = $entry->logo->one();
 
+                    $singleSections = ArrayHelper::where(\Craft::$app->sections->getAllSections(), 
+                    'type', Section::TYPE_SINGLE);
+
+                    $pages = Entry::find()
+                        ->sectionId(ArrayHelper::getColumn($singleSections, 'id'))
+                        ->all();
+
+                    foreach ($pages as $page) {
+                        $pageInfos[] = [
+                            'title' => $page->title,
+                            'url' => $page->url,
+                            'jsonUrl' => UrlHelper::url("{$page->slug}.json")
+                        ];
+                    }
+
                     return [
+                        'pages' => $pageInfos,
                         'logo' => $logo ? $logo->getUrl(['height' => 100]) : null,
                         'footerText' => $entry->footerText,
                     ];
@@ -69,7 +88,7 @@ return [
                 'pretty' => true,
                 'one' => true,
                 'meta' => [
-                    'type' => 'single'
+                    'type' => 'page'
                 ],
             ];
         },

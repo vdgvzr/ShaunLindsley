@@ -34,13 +34,20 @@ const Nav = ({ pages, logo }) => {
                             } else {
                                 classList = 'nav-link'
                             }
-
+                            
                             return (
-                                <li className="nav-item" key={i} >
-                                    <a className={classList} href={page.url}>
-                                        {page.title}
-                                    </a>    
-                                </li>
+                                <>
+                                    {page.title == 'home'
+                                    ?
+                                    <li className="nav-item" key={i} >
+                                        <a className={classList} href={page.url}>
+                                            {page.title}
+                                        </a>    
+                                    </li>
+                                    :
+                                    null
+                                    }
+                                </>
                             )
                         })}
                         {/* <li className="nav-item dropdown">
