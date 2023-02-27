@@ -1,0 +1,19 @@
+columnSuffix: qrxoleop
+contentColumnType: text
+fieldGroup: ada1bcc0-6096-4d90-84db-8aa897c571f3 # Globals
+handle: footerText
+instructions: null
+name: 'Footer Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

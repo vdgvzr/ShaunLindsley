@@ -1,13 +1,30 @@
-dateModified: 1677354086
+dateModified: 1677520967
 email:
   fromEmail: shaunlindsley@gmail.com
   fromName: 'Shaun Lindsley'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: /assets/images
 meta:
   __names__:
+    6c4fbce3-00fb-468b-b92b-bf85829b2846: Home # Home
+    0179b7b4-dd3b-4ffd-ba09-0359e93357ef: Headers # Headers
+    2302dd73-4e04-4686-b1c6-714f442ea962: Images # Images
     4786f2a6-b9b0-4978-8fcc-323833d5e36f: Common # Common
     7162fa47-850d-49b0-96fb-8605f22c2caf: 'Shaun Lindsley' # Shaun Lindsley
+    30166d5f-40f1-483b-a3bd-027b27489b52: 'Footer Text' # Footer Text
+    0192253a-7b31-42de-9c0b-0252c523f7ca: 'Site Settings' # Site Settings
+    570922d8-d425-4880-9eec-191e415af31f: 'Homepage Header' # Homepage Header
+    49391022-844a-462f-91f3-c5f506b86914: Home # Home
+    ada1bcc0-6096-4d90-84db-8aa897c571f3: Globals # Globals
     af0767db-5956-4eaa-9fdd-62f6302fe39c: 'Shaun Lindsley' # Shaun Lindsley
+    b20393e4-a769-4f44-8bde-5b163bbb797b: Logo # Logo
 system:
   edition: solo
   live: true

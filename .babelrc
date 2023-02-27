@@ -4,10 +4,8 @@
         "@babel/preset-react"
     ]
 }
-
-// If error
-
-{
+// if error
+/* {
     "presets": [
         "@babel/preset-env",
         [
@@ -17,4 +15,4 @@
             }
         ]
     ]
-}
+} */

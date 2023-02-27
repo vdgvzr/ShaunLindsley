@@ -1,0 +1,36 @@
+fieldLayouts:
+  97dbf1d8-b8cd-42bb-a862-b76ab6b65bce:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b20393e4-a769-4f44-8bde-5b163bbb797b # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1401bc2-b99b-4dc7-9ee9-e51e302f737d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 30166d5f-40f1-483b-a3bd-027b27489b52 # Footer Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54f2e28e-116d-4ba3-82ab-f7ae7f3175e3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Default
+        uid: 54256aad-5af4-4238-856d-01fbfcccb433
+        userCondition: null
+handle: siteSettings
+name: 'Site Settings'
+sortOrder: 1

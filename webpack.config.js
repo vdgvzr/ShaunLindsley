@@ -6,12 +6,24 @@ module.exports = {
     },
     output: {
         path: path.resolve('./web/res'),
-        filename: '[name].js'
+        filename: '[name].bundle.js'
     },
     // define babel loader
     module: {
         rules: [
-            { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/ }
+            { 
+                test: /\.(js|jsx)$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/ 
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                  "style-loader",
+                  "css-loader",
+                  "sass-loader",
+                ],
+              },
         ]
     }
 };
