@@ -1,4 +1,4 @@
-dateModified: 1677520967
+dateModified: 1677522171
 email:
   fromEmail: shaunlindsley@gmail.com
   fromName: 'Shaun Lindsley'
@@ -25,6 +25,17 @@ meta:
     ada1bcc0-6096-4d90-84db-8aa897c571f3: Globals # Globals
     af0767db-5956-4eaa-9fdd-62f6302fe39c: 'Shaun Lindsley' # Shaun Lindsley
     b20393e4-a769-4f44-8bde-5b163bbb797b: Logo # Logo
+    c06e6a26-769b-485c-98b1-56a73b146893: 'Email Address' # Email Address
+    f57cbeff-f9f6-4487-bf7a-3dcf0bdcee7f: 'Contact Info' # Contact Info
+plugins:
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

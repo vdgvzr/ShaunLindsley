@@ -1,0 +1,24 @@
+fieldLayouts:
+  c8a8baf8-8cfc-4ff6-877e-c3869afea9e2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c06e6a26-769b-485c-98b1-56a73b146893 # Email Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3db8449e-408d-4bdc-a6fe-d16258da017e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Default
+        uid: 64b05296-4914-49d7-bdb2-09b001b0ab2e
+        userCondition: null
+handle: contactInfo
+name: 'Contact Info'
+sortOrder: 2
