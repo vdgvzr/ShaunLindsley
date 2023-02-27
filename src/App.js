@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Layout from './components/layouts/Layout';
 
 const App = () => {
     const [site, setSite] = useState(null);
 
     useEffect(() => {
         axios.get("/site.json").then((response) => {
-            console.log(response.data)
+            console.log(response.data);
             setSite(response.data);
         }).catch((error) => {
-            console.error(error.message)
+            console.error(error.message);
         });
     }, []);
 
     return (
-        <div>
-            Hello world!
-        </div>
+        <Layout site={site}>
+            Hello World!
+        </Layout>
     )
 }
 
