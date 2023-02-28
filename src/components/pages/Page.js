@@ -8,7 +8,7 @@ const Page = ({ page }) => {
             case 'page':
                 switch (page.title) {
                     case 'Home':
-                        return <div>{page.homepageHeader}</div>
+                        return <div className="main-header">{page.homepageHeader}</div>
                     case 'About':
                         return <div>{page.text}</div>
                     case 'Resume':

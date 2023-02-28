@@ -23,7 +23,15 @@ module.exports = {
                   "css-loader",
                   "sass-loader",
                 ],
-              },
+            },
+            {
+                test: /fonts\/.*\.(eot|ttf|woff|woff2)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename:'fonts/[hash][ext][query]',
+                },
+            }
+            
         ]
     }
 };

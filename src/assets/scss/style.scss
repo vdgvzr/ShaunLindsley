@@ -1,4 +1,8 @@
+// Mixins
+@import './mixins/fontMixins.scss';
+
 // Abstract
+@import './abstracts/fonts.scss';
 @import './abstracts/colors.scss';
 @import './abstracts/media-queries.scss';
 @import './abstracts/variables.scss';
