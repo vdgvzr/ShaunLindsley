@@ -32,7 +32,7 @@ class App extends Component {
             console.error(error.message);
         });
 
-        axios.get("/contact.json").then((response) => {
+        axios.get("/contactInfo.json").then((response) => {
             console.log(response.data);
             const contact = response.data;
             this.setState({ contact });

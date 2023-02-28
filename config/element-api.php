@@ -26,14 +26,31 @@ return [
                     $singleSections = ArrayHelper::where(\Craft::$app->sections->getAllSections(), 
                     'type', Section::TYPE_SINGLE);
 
-                    $pages = Entry::find()
+                    $structureSections = ArrayHelper::where(\Craft::$app->sections->getAllSections(), 
+                    'type', Section::TYPE_STRUCTURE);
+
+                    $singles = Entry::find()
                         ->sectionId(ArrayHelper::getColumn($singleSections, 'id'))
                         ->all();
+                    
+                    $structures = Entry::find()
+                        ->sectionId(ArrayHelper::getColumn($structureSections, 'id'))
+                        ->all();
 
-                    foreach ($pages as $page) {
+                    foreach ($singles as $page) {
                         $pageInfos[] = [
                             'title' => $page->title,
                             'url' => $page->url,
+                            'slug' => $page->slug,
+                            'jsonUrl' => UrlHelper::url("{$page->slug}.json")
+                        ];
+                    }
+
+                    foreach ($structures as $page) {
+                        $pageInfos[] = [
+                            'title' => $page->title,
+                            'url' => $page->url,
+                            'slug' => $page->slug,
                             'jsonUrl' => UrlHelper::url("{$page->slug}.json")
                         ];
                     }
@@ -54,7 +71,7 @@ return [
 
         // Contact info
         // =========================================================================
-        'contact.json' => function() {
+        'contactInfo.json' => function() {
             return[
                 'elementType' => 'craft\elements\GlobalSet',
                 'criteria' => ['handle' => 'contactInfo'],
@@ -95,16 +112,60 @@ return [
             ];
         },
 
+         /** 
+         * Structure - Top Level Pages
+         */
+        
         // About
         // =========================================================================
-        '<about.json>'  => function() {
+        'about.json'  => function() {
             return[
                 'elementType' => 'craft\elements\Entry',
                 'criteria' => ['slug' => 'about'],
                 'transformer' => function(Entry $entry) {
                     return [
                         'title' => $entry->title,
-                        'text' => $entry->text->getParsedContent(),
+                        'text' => $entry->text->getRawContent(),
+                    ];
+                },
+                'pretty' => true,
+                'one' => true,
+                'meta' => [
+                    'type' => 'page'
+                ],
+            ];
+        },
+    
+        // Resume
+        // =========================================================================
+        'resume.json'  => function() {
+            return[
+                'elementType' => 'craft\elements\Entry',
+                'criteria' => ['slug' => 'resume'],
+                'transformer' => function(Entry $entry) {
+                    return [
+                        'title' => $entry->title,
+                        'text' => $entry->text->getRawContent(),
+                    ];
+                },
+                'pretty' => true,
+                'one' => true,
+                'meta' => [
+                    'type' => 'page'
+                ],
+            ];
+        },
+
+        // Contact
+        // =========================================================================
+        'contact.json'  => function() {
+            return[
+                'elementType' => 'craft\elements\Entry',
+                'criteria' => ['slug' => 'contact'],
+                'transformer' => function(Entry $entry) {
+                    return [
+                        'title' => $entry->title,
+                        'text' => $entry->text->getRawContent(),
                     ];
                 },
                 'pretty' => true,

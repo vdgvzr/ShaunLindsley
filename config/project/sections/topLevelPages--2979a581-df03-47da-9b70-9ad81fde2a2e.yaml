@@ -1,12 +1,15 @@
 defaultPlacement: end
 enableVersioning: true
-handle: about
-name: About
+handle: topLevelPages
+name: 'Top Level Pages'
 propagationMethod: all
 siteSettings:
   af0767db-5956-4eaa-9fdd-62f6302fe39c: # Shaun Lindsley
     enabledByDefault: true
     hasUrls: true
     template: index.twig
-    uriFormat: about
-type: single
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: d6f254a9-0ada-4408-9816-c03798c92818
+type: structure

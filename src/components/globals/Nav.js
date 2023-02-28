@@ -7,7 +7,7 @@ const Nav = ({ pages, logo }) => {
     } */
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-none">
             <div className='container'>
                 <a className="navbar-brand" href="/">Shaun Lindsley</a>
                 {/* {logo 
@@ -24,7 +24,7 @@ const Nav = ({ pages, logo }) => {
                 </button>
 
                 <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto w-100">
+                    <ul className="navbar-nav ml-auto">
                         {pages.map((page, i) => {
                             const path = window.location.href
                             var classList = ''

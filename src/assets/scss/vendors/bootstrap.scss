@@ -1,2 +1,16 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+// Layout
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+// Navbar
+.navbar {
+    --bs-navbar-padding-y: 1.5rem;
+}

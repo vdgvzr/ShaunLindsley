@@ -16,7 +16,7 @@ settings:
   purifyHtml: true
   redactorConfig: null
   removeEmptyTags: false
-  removeInlineStyles: false
+  removeInlineStyles: true
   removeNbsp: false
   showHtmlButtonForNonAdmins: false
   showUnpermittedFiles: false
