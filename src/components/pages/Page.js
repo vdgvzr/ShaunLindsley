@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Home from './singles/Home';
+import About from './top-level-pages/About';
+import Resume from './top-level-pages/Resume';
+import Contact from './top-level-pages/Contact';
 
 const Page = ({ page }) => {
 
@@ -8,13 +12,13 @@ const Page = ({ page }) => {
             case 'page':
                 switch (page.title) {
                     case 'Home':
-                        return <div className="main-header">{page.homepageHeader}</div>
+                        return <Home page={page} />
                     case 'About':
-                        return <div>{page.text}</div>
+                        return <About page={page} />
                     case 'Resume':
-                        return <div>{page.text}</div>
+                        return <Resume page={page} />
                     case 'Contact':
-                        return <div>{page.text}</div>
+                        return <Contact page={page} />
                     default:
                         console.error('Unknown page.');
                 }

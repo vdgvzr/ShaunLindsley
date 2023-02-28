@@ -143,9 +143,12 @@ return [
                 'elementType' => 'craft\elements\Entry',
                 'criteria' => ['slug' => 'resume'],
                 'transformer' => function(Entry $entry) {
+                    $resume = $entry->resume->one();
+    
                     return [
                         'title' => $entry->title,
                         'text' => $entry->text->getRawContent(),
+                        'resume' => $resume ? $resume->getUrl() : null,
                     ];
                 },
                 'pretty' => true,

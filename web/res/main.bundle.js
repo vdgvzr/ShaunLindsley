@@ -691,6 +691,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var boot
 
 /***/ }),
 
+/***/ "./src/components/components/buttons/Button.js":
+/*!*****************************************************!*\
+  !*** ./src/components/components/buttons/Button.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Button = function Button(_ref) {\n  var external = _ref.external,\n    url = _ref.url,\n    buttonText = _ref.buttonText;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    type: \"button\",\n    className: \"btn btn-primary\",\n    target: external ? \"_blank\" : \"_self\",\n    role: \"button\",\n    href: url,\n    \"aria-label\": \"\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", null, buttonText))));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/components/buttons/Button.js?");
+
+/***/ }),
+
 /***/ "./src/components/globals/Footer.js":
 /*!******************************************!*\
   !*** ./src/components/globals/Footer.js ***!
@@ -731,7 +742,51 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Page = function Page(_ref) {\n  var page = _ref.page;\n  if (page) {\n    var _page$meta;\n    switch (page === null || page === void 0 ? void 0 : (_page$meta = page.meta) === null || _page$meta === void 0 ? void 0 : _page$meta.type) {\n      case 'page':\n        switch (page.title) {\n          case 'Home':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n              className: \"main-header\"\n            }, page.homepageHeader);\n          case 'About':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, page.text);\n          case 'Resume':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, page.text);\n          case 'Contact':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, page.text);\n          default:\n            console.error('Unknown page.');\n        }\n      default:\n        console.error('Unknown content type.');\n    }\n  }\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Page);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/pages/Page.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _singles_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./singles/Home */ \"./src/components/pages/singles/Home.js\");\n/* harmony import */ var _top_level_pages_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./top-level-pages/About */ \"./src/components/pages/top-level-pages/About.js\");\n/* harmony import */ var _top_level_pages_Resume__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./top-level-pages/Resume */ \"./src/components/pages/top-level-pages/Resume.js\");\n/* harmony import */ var _top_level_pages_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./top-level-pages/Contact */ \"./src/components/pages/top-level-pages/Contact.js\");\n\n\n\n\n\nvar Page = function Page(_ref) {\n  var page = _ref.page;\n  if (page) {\n    var _page$meta;\n    switch (page === null || page === void 0 ? void 0 : (_page$meta = page.meta) === null || _page$meta === void 0 ? void 0 : _page$meta.type) {\n      case 'page':\n        switch (page.title) {\n          case 'Home':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_singles_Home__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n              page: page\n            });\n          case 'About':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_top_level_pages_About__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n              page: page\n            });\n          case 'Resume':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_top_level_pages_Resume__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n              page: page\n            });\n          case 'Contact':\n            return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_top_level_pages_Contact__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n              page: page\n            });\n          default:\n            console.error('Unknown page.');\n        }\n      default:\n        console.error('Unknown content type.');\n    }\n  }\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Page);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/pages/Page.js?");
+
+/***/ }),
+
+/***/ "./src/components/pages/singles/Home.js":
+/*!**********************************************!*\
+  !*** ./src/components/pages/singles/Home.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Home = function Home(_ref) {\n  var page = _ref.page;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"main-header\"\n  }, page.homepageHeader));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/pages/singles/Home.js?");
+
+/***/ }),
+
+/***/ "./src/components/pages/top-level-pages/About.js":
+/*!*******************************************************!*\
+  !*** ./src/components/pages/top-level-pages/About.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar About = function About(_ref) {\n  var page = _ref.page;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, page.text));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/pages/top-level-pages/About.js?");
+
+/***/ }),
+
+/***/ "./src/components/pages/top-level-pages/Contact.js":
+/*!*********************************************************!*\
+  !*** ./src/components/pages/top-level-pages/Contact.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar Contact = function Contact(_ref) {\n  var page = _ref.page;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, page.text));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/pages/top-level-pages/Contact.js?");
+
+/***/ }),
+
+/***/ "./src/components/pages/top-level-pages/Resume.js":
+/*!********************************************************!*\
+  !*** ./src/components/pages/top-level-pages/Resume.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_buttons_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/buttons/Button */ \"./src/components/components/buttons/Button.js\");\n\n\nvar Resume = function Resume(_ref) {\n  var page = _ref.page;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, page.text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_buttons_Button__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    external: true,\n    url: page.resume,\n    buttonText: \"View Resume\"\n  }));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Resume);\n\n//# sourceURL=webpack://shaunlindsley/./src/components/pages/top-level-pages/Resume.js?");
 
 /***/ }),
 
