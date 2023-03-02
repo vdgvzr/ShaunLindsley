@@ -30,6 +30,18 @@ module.exports = {
                 generator: {
                     filename:'fonts/[hash][ext][query]',
                 },
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'assets/[name].[ext]'
+                        }
+                    }
+                ]
+                
             }
             
         ]

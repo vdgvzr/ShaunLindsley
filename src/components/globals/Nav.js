@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Icon from '../components/icons/Icon';
 
 const Nav = ({ pages, logo }) => {
     /* const [open, setOpen] = useState(false)
@@ -39,7 +40,7 @@ const Nav = ({ pages, logo }) => {
                                 return (
                                     <li className="nav-item" key={i}>
                                         <a className={classList} href={page.url}>
-                                            {page.title}
+                                            <Icon name={page.title} color="#000" height="30" width="50" />
                                         </a>    
                                     </li>
                                 )
