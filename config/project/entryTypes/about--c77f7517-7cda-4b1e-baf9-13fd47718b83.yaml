@@ -32,13 +32,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8f75332b-ac8d-4234-8499-fad16d02710c # Text
+            fieldUid: c09c2efd-1756-447f-8034-7a97af3a171e # About Content
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 30ba2bcb-38e6-40b6-9301-2e6aa771695b
+            uid: 897fdaf5-bdb0-406a-ad0f-724527ee6f39
             userCondition: null
             warning: null
             width: 100

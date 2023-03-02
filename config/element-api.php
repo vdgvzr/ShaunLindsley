@@ -6,6 +6,61 @@ use craft\helpers\UrlHelper;
 use craft\helpers\ArrayHelper;
 use craft\models\Section;
 
+function transformResumeContent(Entry $entry){
+    $bodyBlocks = [];
+    $blocks = $entry->resumeContent->all();
+    foreach ($blocks as $block) {
+        switch ($block->type->handle) {
+            case 'skills':
+                $skills = [];
+                foreach ($block->skill as $row){
+                    $skills[] = [
+                        'skillName' => $row->skillName,
+                        'skillProficiency' => $row->skillProficiency,
+                    ];
+                }
+                $bodyBlocks[] = [
+                    "skills" => [
+                        'heading' => $block->heading,
+                        'skills' => $skills,
+                    ]
+                ];
+                break;
+            case 'resume':
+                $resume = $block->resumeFileCta->one();
+                $bodyBlocks[] = [
+                    'resume' => $resume ? $resume->getUrl() : null,
+                ];
+                break;
+        }
+    }
+    return $bodyBlocks;
+}
+
+function transformAboutContent(Entry $entry){
+    $bodyBlocks = [];
+    $blocks = $entry->aboutContent->all();
+    foreach ($blocks as $block) {
+        switch ($block->type->handle) {
+            case 'aboutMe':
+                $image = $block->image->one();
+                $bodyBlocks[] = [
+                    'heading' => $block->heading,
+                    'copy' => $block->copy,
+                    'image' => $image ? $image->getUrl() : null,
+                ];
+                break;
+            case 'hobbiesAndInterests':
+                $bodyBlocks[] = [
+                    'heading' => $block->heading,
+                    'copy' => $block->copy,
+                ];
+                break;
+        }
+    }
+    return $bodyBlocks;
+}
+
 $pageInfos = [];
 
 return [
@@ -125,7 +180,7 @@ return [
                 'transformer' => function(Entry $entry) {
                     return [
                         'title' => $entry->title,
-                        'text' => $entry->text->getRawContent(),
+                        'content' => transformAboutContent($entry),
                     ];
                 },
                 'pretty' => true,
@@ -143,12 +198,9 @@ return [
                 'elementType' => 'craft\elements\Entry',
                 'criteria' => ['slug' => 'resume'],
                 'transformer' => function(Entry $entry) {
-                    $resume = $entry->resume->one();
-    
                     return [
                         'title' => $entry->title,
-                        'text' => $entry->text->getRawContent(),
-                        'resume' => $resume ? $resume->getUrl() : null,
+                        'content' => transformResumeContent($entry),
                     ];
                 },
                 'pretty' => true,

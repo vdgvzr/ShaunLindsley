@@ -4,12 +4,23 @@ import Button from "../../components/buttons/Button";
 const Resume = ({ page }) => {
     return (
         <>
-            <div>{page.text}</div>
-            <Button 
-                external={true}
-                url={page.resume}
-                buttonText="View Resume"
-            />
+            {page.title}
+            {page.content.map((block, i) => {
+                return(
+                    <div key={i}>
+                        {block.skills?.heading}
+                        {block.skills?.skills.map((skill, i) => {
+                            return(
+                                <div key={i}>
+                                    <p>{skill.skillName}</p>
+                                    <p>{skill.skillProficiency}</p>
+                                </div>
+                            )
+                        })}
+                        {block.resume}
+                    </div>
+                )
+            })}
         </>
     );
 }

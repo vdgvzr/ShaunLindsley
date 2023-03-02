@@ -1,0 +1,27 @@
+columnSuffix: nbcuylzo
+contentColumnType: text
+fieldGroup: 2a359398-cb26-489f-82ef-a69d7a634032 # About
+handle: aboutCopy
+instructions: null
+name: 'About Copy'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: null
+  removeEmptyTags: false
+  removeInlineStyles: true
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

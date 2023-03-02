@@ -3,7 +3,16 @@ import React from "react";
 const About = ({ page }) => {
     return (
         <>
-            <div>{page.text}</div>
+            {page.title}
+            {page.content.map((block, i) => {
+                return(
+                    <div key={i}>
+                        <div>{block.heading}</div>
+                        <div>{block.copy}</div>
+                        <div>{block.image}</div>
+                    </div>
+                )
+            })}
         </>
     );
 }

@@ -1,0 +1,96 @@
+field: 56bca27e-21ec-40c1-86d5-94bcb44b865e # Resume Content
+fieldLayouts:
+  9e3da24a-5407-4452-b357-b424f22175e6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f2e92cd6-3467-473c-94ab-7ee4d5b35805 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2d0a065-6a51-4ed5-b22a-77156dd3e793
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f65f3d28-d22c-45b0-a284-1091bca90a05 # SKill
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd0c822b-184a-4a0d-878b-912fc8eff025
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 36720cd1-a3ca-472b-9a75-5794c0fc413c
+        userCondition: null
+fields:
+  f2e92cd6-3467-473c-94ab-7ee4d5b35805: # Heading
+    columnSuffix: eucqfvdk
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f65f3d28-d22c-45b0-a284-1091bca90a05: # SKill
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: skill
+    instructions: null
+    name: SKill
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1376798103
+      columns:
+        __assoc__:
+          -
+            - ba0a35dc-4c94-4d79-8b9b-980b5a18875a # Skill Name
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b02c9884-6d15-4b53-8783-6fcd24847c0f # Skill Proficiency
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_2_skill}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
+handle: skills
+name: Skills
+sortOrder: 1

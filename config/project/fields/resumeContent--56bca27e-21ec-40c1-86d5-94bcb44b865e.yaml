@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 9e7ffa58-d39e-47a7-950a-4836dd482ccc # Resume
+handle: resumeContent
+instructions: null
+name: 'Resume Content'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_resumecontent}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,17 +1,17 @@
 import React from "react";
 
-const Button = ({ external, url, buttonText }) => {
+const Button = ({ external, url, buttonText, download, type }) => {
     return (
         <>
             <div className="">
                 <a
-                    type="button"
-                    
+                    type={type}
                     className="btn btn-primary"
                     target={external ? "_blank" : "_self"}
-                    role="button"
+                    role={type}
                     href={url}
-                    aria-label=""
+                    aria-label={buttonText}
+                    download={download}
                 >
                     <span>{buttonText}</span>
                 </a>

@@ -1,4 +1,4 @@
-dateModified: 1677607191
+dateModified: 1677771819
 email:
   fromEmail: shaunlindsley@gmail.com
   fromName: 'Shaun Lindsley'
@@ -20,10 +20,19 @@ fs:
     url: /assets/images
 meta:
   __names__:
+    0e68a2b3-0d6e-46e2-8aa3-5a2ca7f49a8f: Image # Image
+    1cfe2854-82d8-4277-8615-11193c61437b: 'About Me' # About Me
+    2a359398-cb26-489f-82ef-a69d7a634032: About # About
+    3cbc8d27-5662-4d38-88ef-b67e2b2f6576: Skills # Skills
     5a9e8aa7-6196-4d4a-9671-fada6785066f: Files # Files
     6c4fbce3-00fb-468b-b92b-bf85829b2846: Home # Home
+    7bf6a24a-e6e7-4993-9055-ab77e597b6b5: Heading # Heading
     8f75332b-ac8d-4234-8499-fad16d02710c: Text # Text
+    9e7ffa58-d39e-47a7-950a-4836dd482ccc: Resume # Resume
+    56bca27e-21ec-40c1-86d5-94bcb44b865e: 'Resume Content' # Resume Content
+    87c08edf-b309-4356-bc29-36e6843f80ce: Resume # Resume
     95f399dc-ee00-4dfb-a358-97205d986c71: Resume # Resume
+    107cb971-1ae0-4d0d-b554-8856054445e4: 'Resume File Cta' # Resume File Cta
     0179b7b4-dd3b-4ffd-ba09-0359e93357ef: Headers # Headers
     634b63c8-1c41-4182-bd74-dcb884686c87: Resume # Resume
     2302dd73-4e04-4686-b1c6-714f442ea962: Images # Images
@@ -36,12 +45,22 @@ meta:
     49391022-844a-462f-91f3-c5f506b86914: Home # Home
     ada1bcc0-6096-4d90-84db-8aa897c571f3: Globals # Globals
     af0767db-5956-4eaa-9fdd-62f6302fe39c: 'Shaun Lindsley' # Shaun Lindsley
+    b02c9884-6d15-4b53-8783-6fcd24847c0f: 'Skill Proficiency' # Skill Proficiency
     b20393e4-a769-4f44-8bde-5b163bbb797b: Logo # Logo
+    b2436948-290b-4871-b543-35e1a08bbacb: 'About Copy' # About Copy
+    ba0a35dc-4c94-4d79-8b9b-980b5a18875a: 'Skill Name' # Skill Name
     c06e6a26-769b-485c-98b1-56a73b146893: 'Email Address' # Email Address
+    c09c2efd-1756-447f-8034-7a97af3a171e: 'About Content' # About Content
     c77f7517-7cda-4b1e-baf9-13fd47718b83: About # About
+    c912a548-de77-4ab1-bb84-87cd32164509: Copy # Copy
     d3036d09-2068-444f-960f-9de95313d72e: Contact # Contact
     eb3c172c-232c-42ad-b0e0-f2bc7e76a5b0: Files # Files
+    f2e92cd6-3467-473c-94ab-7ee4d5b35805: Heading # Heading
     f57cbeff-f9f6-4487-bf7a-3dcf0bdcee7f: 'Contact Info' # Contact Info
+    f65f3d28-d22c-45b0-a284-1091bca90a05: SKill # SKill
+    f521d771-e90b-4c71-9316-3d47d13b6868: Heading # Heading
+    facca048-b510-488d-88f7-3048a9413038: 'Hobbies and Interests' # Hobbies and Interests
+    ff68bbb4-47a4-4a17-a332-3e9f6cb3b1d5: Copy # Copy
 plugins:
   element-api:
     edition: standard
@@ -51,6 +70,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
 system:
   edition: solo
   live: true

@@ -1,0 +1,146 @@
+field: c09c2efd-1756-447f-8034-7a97af3a171e # About Content
+fieldLayouts:
+  25b9f85b-8357-444d-a8c1-54b48fdd192e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7bf6a24a-e6e7-4993-9055-ab77e597b6b5 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8885b994-f387-432f-9bb2-617d6528e0b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ff68bbb4-47a4-4a17-a332-3e9f6cb3b1d5 # Copy
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35b4a842-4ee8-4354-a9b7-f6a1868a84cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0e68a2b3-0d6e-46e2-8aa3-5a2ca7f49a8f # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f39b8d69-5904-426e-80be-4afb054509a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a74f6b0a-024e-4ded-863f-f9022578d086
+        userCondition: null
+fields:
+  0e68a2b3-0d6e-46e2-8aa3-5a2ca7f49a8f: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:2302dd73-4e04-4686-b1c6-714f442ea962' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2302dd73-4e04-4686-b1c6-714f442ea962' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:2302dd73-4e04-4686-b1c6-714f442ea962' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  7bf6a24a-e6e7-4993-9055-ab77e597b6b5: # Heading
+    columnSuffix: lfczwjgm
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ff68bbb4-47a4-4a17-a332-3e9f6cb3b1d5: # Copy
+    columnSuffix: vtckzdvx
+    contentColumnType: text
+    fieldGroup: null
+    handle: copy
+    instructions: null
+    name: Copy
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: true
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: aboutMe
+name: 'About Me'
+sortOrder: 1

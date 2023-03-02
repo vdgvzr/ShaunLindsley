@@ -3,10 +3,6 @@ import axios from 'axios'
 import Layout from './components/layouts/Layout';
 import Page from './components/pages/Page';
 
-var $ = require('jquery');
-window.jQuery = $;
-window.$ = $;
-
 class App extends Component {
     constructor(props) {
         super(props);

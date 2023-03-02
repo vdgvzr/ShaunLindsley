@@ -1,0 +1,74 @@
+field: 56bca27e-21ec-40c1-86d5-94bcb44b865e # Resume Content
+fieldLayouts:
+  1b38f16d-03cc-42b1-9679-ad1dd920e377:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 107cb971-1ae0-4d0d-b554-8856054445e4 # Resume File Cta
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4fd86281-aa3f-4512-b709-13dc1a9cdb58
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ffd012a5-eb26-4b92-b942-1f5313049811
+        userCondition: null
+fields:
+  107cb971-1ae0-4d0d-b554-8856054445e4: # Resume File Cta
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: resumeFileCta
+    instructions: null
+    name: 'Resume File Cta'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:5a9e8aa7-6196-4d4a-9671-fada6785066f' # Files
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2302dd73-4e04-4686-b1c6-714f442ea962' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:5a9e8aa7-6196-4d4a-9671-fada6785066f' # Files
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: resume
+name: Resume
+sortOrder: 2
