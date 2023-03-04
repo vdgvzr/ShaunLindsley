@@ -14,7 +14,7 @@ const Layout = ({ children, site, contact }) => {
                 </div>
                 <div className='col-11'>
                     <div id="content" className="row">
-                        <div class="col-12">
+                        <div className="col-12">
                             <main id="main" className="">
                                 {children}
                             </main>
