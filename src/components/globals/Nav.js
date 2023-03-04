@@ -8,9 +8,9 @@ const Nav = ({ pages, logo }) => {
     } */
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-none">
-            <div className='container'>
-                <a className="navbar-brand" href="/">Shaun Lindsley</a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-none h-100">
+            <div className='container flex-column h-100'>
+                <a className="navbar-brand p-0 m-0 custom-panel" href="/">S L</a>
                 {/* {logo 
                     ?
                     <a href={window.location.host}>
@@ -39,8 +39,8 @@ const Nav = ({ pages, logo }) => {
                             if (page.title !== 'Home') {
                                 return (
                                     <li className="nav-item" key={i}>
-                                        <a className={classList} href={page.url}>
-                                            <Icon name={page.title} color="#000" height="30" width="50" />
+                                        <a className={classList} href={page.url} aria-label={page.title}>
+                                            <Icon name={page.title} color="#b5bddb" height="30" width="50" />
                                         </a>    
                                     </li>
                                 )

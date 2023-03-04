@@ -1,6 +1,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+:root {
+    --bs-body-color: #b5bddb;
+}
+
 // Layout
 .mr-auto {
     margin-right: auto !important;

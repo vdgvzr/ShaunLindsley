@@ -6,6 +6,7 @@
 @import './abstracts/colors.scss';
 @import './abstracts/media-queries.scss';
 @import './abstracts/variables.scss';
+@import './abstracts/typography.scss';
 
 // Base
 @import './base/base.scss';
@@ -14,6 +15,8 @@
 // Components
 
 // Layout
+
+@import './layout/layout.scss';
 
 // Pages
 

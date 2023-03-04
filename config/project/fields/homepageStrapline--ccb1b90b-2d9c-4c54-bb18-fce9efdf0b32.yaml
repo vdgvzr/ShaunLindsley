@@ -1,9 +1,9 @@
-columnSuffix: adpjxfpd
+columnSuffix: xptwcfnb
 contentColumnType: text
 fieldGroup: 0179b7b4-dd3b-4ffd-ba09-0359e93357ef # Homepage
-handle: homepageHeader
+handle: homepageStrapline
 instructions: null
-name: 'Homepage Header'
+name: 'Homepage Strapline'
 searchable: false
 settings:
   byteLimit: null

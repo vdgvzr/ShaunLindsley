@@ -4,10 +4,9 @@ import Button from "../../components/buttons/Button";
 const Resume = ({ page }) => {
     return (
         <>
-            {page.title}
             {page.content.map((block, i) => {
                 return(
-                    <div key={i}>
+                    <div key={i} className="custom-panel">
                         {block.skills?.heading}
                         {block.skills?.skills.map((skill, i) => {
                             return(

@@ -1,4 +1,4 @@
-dateModified: 1677771819
+dateModified: 1677793766
 email:
   fromEmail: shaunlindsley@gmail.com
   fromName: 'Shaun Lindsley'
@@ -29,11 +29,12 @@ meta:
     7bf6a24a-e6e7-4993-9055-ab77e597b6b5: Heading # Heading
     8f75332b-ac8d-4234-8499-fad16d02710c: Text # Text
     9e7ffa58-d39e-47a7-950a-4836dd482ccc: Resume # Resume
+    35cfebcd-2ad0-4e27-a568-7ba76ebcf928: 'My Name' # My Name
     56bca27e-21ec-40c1-86d5-94bcb44b865e: 'Resume Content' # Resume Content
     87c08edf-b309-4356-bc29-36e6843f80ce: Resume # Resume
     95f399dc-ee00-4dfb-a358-97205d986c71: Resume # Resume
     107cb971-1ae0-4d0d-b554-8856054445e4: 'Resume File Cta' # Resume File Cta
-    0179b7b4-dd3b-4ffd-ba09-0359e93357ef: Headers # Headers
+    0179b7b4-dd3b-4ffd-ba09-0359e93357ef: Homepage # Homepage
     634b63c8-1c41-4182-bd74-dcb884686c87: Resume # Resume
     2302dd73-4e04-4686-b1c6-714f442ea962: Images # Images
     2979a581-df03-47da-9b70-9ad81fde2a2e: 'Top Level Pages' # Top Level Pages
@@ -53,12 +54,14 @@ meta:
     c09c2efd-1756-447f-8034-7a97af3a171e: 'About Content' # About Content
     c77f7517-7cda-4b1e-baf9-13fd47718b83: About # About
     c912a548-de77-4ab1-bb84-87cd32164509: Copy # Copy
+    ccb1b90b-2d9c-4c54-bb18-fce9efdf0b32: 'Homepage Strapline' # Homepage Strapline
     d3036d09-2068-444f-960f-9de95313d72e: Contact # Contact
     eb3c172c-232c-42ad-b0e0-f2bc7e76a5b0: Files # Files
     f2e92cd6-3467-473c-94ab-7ee4d5b35805: Heading # Heading
     f57cbeff-f9f6-4487-bf7a-3dcf0bdcee7f: 'Contact Info' # Contact Info
     f65f3d28-d22c-45b0-a284-1091bca90a05: SKill # SKill
     f521d771-e90b-4c71-9316-3d47d13b6868: Heading # Heading
+    f115756f-2397-46bb-8de4-ee6a414a1a04: Strapline # Strapline
     facca048-b510-488d-88f7-3048a9413038: 'Hobbies and Interests' # Hobbies and Interests
     ff68bbb4-47a4-4a17-a332-3e9f6cb3b1d5: Copy # Copy
 plugins:

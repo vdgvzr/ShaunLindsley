@@ -3,7 +3,7 @@ import React from "react";
 const Contact = ({ page }) => {
     return (
         <>
-            <div>{page.text}</div>
+            <div className="custom-panel">{page.text}</div>
         </>
     );
 }

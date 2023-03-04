@@ -157,6 +157,7 @@ return [
                     return [
                         'title' => $entry->title,
                         'homepageHeader' => $entry->homepageHeader,
+                        'homepageStrapline' => $entry->homepageStrapline,
                     ];
                 },
                 'pretty' => true,

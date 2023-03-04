@@ -1,0 +1,89 @@
+// Layout
+
+.wrapper {
+    @include lato;
+    display: flex;
+    background: $portfolio-galaxy;
+    position: relative;
+    /* background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(19,24,39,1) 100%); */
+
+    &__blur {
+        position: absolute;
+        height: calc(100vh - 200px);
+        width: calc(100vw - 200px);
+        top: 100px;
+        left: 100px;
+        background-color: rgb(46 55 82/1);
+        filter: blur(6.5rem);
+    }
+
+    #sidebar {
+        height: calc(100vh - (1.5rem * 2));
+        margin: 1.5rem 0 1.5rem 1.5rem !important;
+        padding: 0 !important;
+        position: sticky;
+        top: 1.5rem;
+        z-index: 10;
+
+        .navbar {
+            .navbar-brand {
+                color: $portfolio-light-grey;
+            }
+    
+            .navbar-nav {
+                flex-direction: column;
+                .nav-item {
+                    .nav-link {
+                        margin: 0.75rem 0;
+                        color: $portfolio-light-grey;
+                        position: relative;
+
+                        &::before {
+                            opacity: 0;
+                            transform: translate(0, -50%);
+                            width: 0;
+                            height: 0;
+                            border: 5px solid transparent;
+                            border-left-color: $portfolio-light-grey;
+                        }
+
+                        &::after {
+                            opacity: 0;
+                            pointer-events: none;
+                            transition: all 0.18s ease-out 0.18s;
+                            text-indent: 0;
+                            background: $portfolio-black;
+                            border-radius: 2px;
+                            color: white;
+                            content: attr(aria-label);
+                            padding: 0.5em 1em;
+                            position: absolute;
+                            z-index: 10;
+                            position: absolute;
+                            top: 5px;
+                            left: 68px;
+                            color: black;
+                            background-color: $portfolio-light-grey;
+                        }
+
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                            }
+
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #content {
+        position: relative;
+        width: 100%;
+    }
+}
