@@ -2,7 +2,6 @@
 
 .wrapper {
     @include lato;
-    display: flex;
     background: $portfolio-galaxy;
     position: relative;
     /* background: rgb(63,94,251);
@@ -10,7 +9,7 @@
 
     &__blur {
         position: absolute;
-        height: calc(100vh - 200px);
+        height: calc(100% - 200px);
         width: calc(100vw - 200px);
         top: 100px;
         left: 100px;
@@ -86,4 +85,10 @@
         position: relative;
         width: 100%;
     }
+
+    /* #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    } */
 }

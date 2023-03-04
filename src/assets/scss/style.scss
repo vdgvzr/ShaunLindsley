@@ -1,31 +1,35 @@
 // Mixins
-@import './mixins/fontMixins.scss';
+@import './Mixins/fontMixins.scss';
 
 // Abstract
-@import './abstracts/fonts.scss';
-@import './abstracts/colors.scss';
-@import './abstracts/media-queries.scss';
-@import './abstracts/variables.scss';
-@import './abstracts/typography.scss';
+@import './Abstracts/fonts.scss';
+@import './Abstracts/colors.scss';
+@import './Abstracts/media-queries.scss';
+@import './Abstracts/variables.scss';
+@import './Abstracts/typography.scss';
 
 // Base
-@import './base/base.scss';
-@import './base/reset.scss';
+@import './Base/base.scss';
+@import './Base/reset.scss';
 
 // Components
 
+@import './Components/panels.scss';
+
 // Layout
 
-@import './layout/layout.scss';
+@import './Layout/layout.scss';
 
 // Pages
+
+@import './Pages/home.scss';
 
 // Themes
 
 // Utilities
-@import './utilities/container.scss';
-@import './utilities/exceptions.scss';
-@import './utilities/main.scss';
+@import './Utilities/container.scss';
+@import './Utilities/exceptions.scss';
+@import './Utilities/main.scss';
 
 // Vendors
-@import './vendors/bootstrap.scss';
+@import './Vendors/bootstrap.scss';
