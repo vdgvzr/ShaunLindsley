@@ -6,9 +6,21 @@ const About = ({ page }) => {
             {page.content.map((block, i) => {
                 return(
                     <div key={i} className="custom-panel">
-                        <div>{block.heading}</div>
-                        <div>{block.copy}</div>
-                        <div>{block.image}</div>
+                        <div className="container">
+                            <div className="row">
+                                <div className=" col-12">
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <h2 className="mb-3">{block.heading}</h2>
+                                            <p>{block.copy}</p>
+                                        </div>
+                                        <div className="col-6">
+                                            <img className="w-100" src={block.image}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 )
             })}
