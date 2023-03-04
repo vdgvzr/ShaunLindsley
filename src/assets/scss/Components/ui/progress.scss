@@ -1,0 +1,12 @@
+// Progress
+
+.progress-ring {
+    text-align: center;
+    position: relative;
+
+    &__progress {
+        position: absolute;
+        width: 100%;
+        top: 33%;
+    }
+}

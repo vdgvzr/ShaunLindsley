@@ -10,7 +10,7 @@ const Nav = ({ pages, logo }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-none h-100">
             <div className='container flex-column h-100'>
-                <a className="navbar-brand p-0 m-0" href="/">S L</a>
+                <a className="navbar-brand p-0 m-0 nav-link" href="/" aria-label="home">S L</a>
                 {/* {logo 
                     ?
                     <a href={window.location.host}>
@@ -40,7 +40,7 @@ const Nav = ({ pages, logo }) => {
                                 return (
                                     <li className="nav-item" key={i}>
                                         <a className={classList} href={page.url} aria-label={page.title}>
-                                            <Icon name={page.title} color="#b5bddb" height="30" width="50" />
+                                            <Icon name={page.title} color="#e0e1dd" height="30" width="50" />
                                         </a>    
                                     </li>
                                 )

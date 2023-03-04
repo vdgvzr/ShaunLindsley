@@ -2,7 +2,7 @@
 
 .wrapper {
     @include lato;
-    background: $portfolio-galaxy;
+    background: $portfolio-rich-black;
     position: relative;
     /* background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(19,24,39,1) 100%); */
@@ -13,7 +13,7 @@
         width: calc(100vw - 200px);
         top: 100px;
         left: 100px;
-        background-color: rgb(46 55 82/1);
+        background-color: $portfoilio-oxford-blue;
         filter: blur(6.5rem);
     }
 
@@ -27,7 +27,7 @@
 
         .navbar {
             .navbar-brand {
-                color: $portfolio-light-grey;
+                color: $portfolio-platinum;
             }
     
             .navbar-nav {
@@ -35,7 +35,7 @@
                 .nav-item {
                     .nav-link {
                         margin: 0.75rem 0;
-                        color: $portfolio-light-grey;
+                        color: $portfolio-platinum;
                         position: relative;
 
                         &::before {
@@ -44,7 +44,7 @@
                             width: 0;
                             height: 0;
                             border: 5px solid transparent;
-                            border-left-color: $portfolio-light-grey;
+                            border-left-color: $portfolio-platinum;
                         }
 
                         &::after {
@@ -60,10 +60,10 @@
                             position: absolute;
                             z-index: 10;
                             position: absolute;
-                            top: 5px;
+                            top: 2px;
                             left: 68px;
                             color: black;
-                            background-color: $portfolio-light-grey;
+                            background-color: $portfolio-platinum;
                         }
 
                         &:hover {
