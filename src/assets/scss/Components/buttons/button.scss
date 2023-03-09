@@ -6,7 +6,9 @@
     padding: 10px 20px;
     border: 2px solid $portfolio-platinum;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: none;
 
     svg {
         height: 20px;
@@ -16,6 +18,7 @@
 
     &:hover {
         border: 2px solid $portfolio-cyan;
+        color: $portfolio-cyan;
 
         svg {
             fill: $portfolio-cyan !important;

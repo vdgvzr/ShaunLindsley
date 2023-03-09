@@ -8,7 +8,7 @@ const Layout = ({ children, site, contact }) => {
             <div className="wrapper__blur"></div>
             <div className="row">
                 <div className="col-1">
-                    <header id="sidebar" className="custom-panel">
+                    <header id="sidebar" className="">
                         <Nav pages={site?.pages || []} logo={site?.logo} />
                     </header>
                 </div>

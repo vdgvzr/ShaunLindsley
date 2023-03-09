@@ -1,4 +1,6 @@
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
+
 module.exports = {
     // define entry file and output
     entry: {
@@ -45,5 +47,8 @@ module.exports = {
             }
             
         ]
-    }
+    },
+    plugins: [
+        new Dotenv()
+    ]
 };

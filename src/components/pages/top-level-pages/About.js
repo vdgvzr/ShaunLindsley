@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../components/headers/Header";
 
 const About = ({ page }) => {
     return (
@@ -10,13 +11,22 @@ const About = ({ page }) => {
                             <div className="row">
                                 <div className=" col-12">
                                     <div className="row">
-                                        <div className="col-6">
-                                            <h2 className="mb-3">{block.heading}</h2>
+                                        <div className={`col-${block.image ? 6 : 12}`}>
+                                            <Header 
+                                                title={block.heading}
+                                                textAlign="start"
+                                                colWidth="12"
+                                            />
                                             <p>{block.copy}</p>
                                         </div>
+                                        {block.image
+                                        ?
                                         <div className="col-6">
                                             <img className="w-100" src={block.image}/>
                                         </div>
+                                        :
+                                        null
+                                        }
                                     </div>
                                 </div>
                             </div>

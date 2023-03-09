@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../components/buttons/Button";
 import ProgressRing from "../../components/ui/ProgressRing";
+import Header from "../../components/headers/Header";
 
 const Resume = ({ page }) => {
     return (
@@ -8,12 +9,12 @@ const Resume = ({ page }) => {
             <div className="custom-panel">
                 <div className="container">
                     <div className="row">
-                        <div className=" col-12">
-                            <div className="row">
-                                <div className="col-12">
-                                    <h2 className="mb-3">{page.content[0].skills?.heading}</h2>
-                                </div>
-                            </div>
+                        <div className="col-12">
+                            <Header 
+                                title={page.content[0].skills?.heading}
+                                textAlign="center"
+                                colWidth="12"
+                            />
                             <div className="row">
                                 {page.content[0].skills?.skills.map((skill, i) => {
                                     return(

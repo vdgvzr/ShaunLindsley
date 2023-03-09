@@ -1,4 +1,4 @@
-dateModified: 1677793766
+dateModified: 1678095508
 email:
   fromEmail: shaunlindsley@gmail.com
   fromName: 'Shaun Lindsley'
@@ -31,6 +31,7 @@ meta:
     9e7ffa58-d39e-47a7-950a-4836dd482ccc: Resume # Resume
     35cfebcd-2ad0-4e27-a568-7ba76ebcf928: 'My Name' # My Name
     56bca27e-21ec-40c1-86d5-94bcb44b865e: 'Resume Content' # Resume Content
+    72b8053b-1916-49ed-a728-88cb49abd19b: Contact # Contact
     87c08edf-b309-4356-bc29-36e6843f80ce: Resume # Resume
     95f399dc-ee00-4dfb-a358-97205d986c71: Resume # Resume
     107cb971-1ae0-4d0d-b554-8856054445e4: 'Resume File Cta' # Resume File Cta
@@ -65,10 +66,25 @@ meta:
     facca048-b510-488d-88f7-3048a9413038: 'Hobbies and Interests' # Hobbies and Interests
     ff68bbb4-47a4-4a17-a332-3e9f6cb3b1d5: Copy # Copy
 plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Shaun Lindsley'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: $PRIMARY_SITE_EMAIL
   element-api:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.2
   redactor:
     edition: standard
     enabled: true
