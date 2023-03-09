@@ -1,14 +1,1 @@
 // Panels
-
-.custom-panel {
-    /* border: 1px solid $portfolio-black; */
-    box-shadow: 11px 13px 24px -3px rgba(0,0,0,0.62);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    background-color: $portfoilio-oxford-blue;
-    margin-bottom: 1.5rem;
-
-    @include media-breakpoint-up(lg) {
-        margin-top: 1.5rem !important;
-    }
-}

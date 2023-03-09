@@ -107,7 +107,7 @@ const Contact = ({ page }) => {
                                 null
                             }
                             <div className="row justify-content-center">
-                                <div className="col-6">
+                                <div className="col-lg-6 col-12">
                                     <Form 
                                         form={page.form[0]}
                                         onSubmit={submitForm}

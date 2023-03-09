@@ -40,7 +40,7 @@ const Nav = ({ pages, logo }) => {
                                 return (
                                     <li className="nav-item" key={i}>
                                         <a className={classList} href={page.url} aria-label={page.title}>
-                                            <Icon name={page.title} color="#e0e1dd" height="30" width="50" />
+                                            <Icon name={page.title} color="#fff" height="30" width="50" />
                                         </a>    
                                     </li>
                                 )

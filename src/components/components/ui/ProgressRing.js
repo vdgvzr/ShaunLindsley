@@ -24,7 +24,7 @@ class ProgressRing extends Component {
                 className="mb-2"
             >
                 <circle
-                    stroke="#00fffb"
+                    stroke="#1e88e5"
                     fill="transparent"
                     strokeWidth={stroke}
                     strokeDasharray={this.circumference + ' ' + this.circumference}

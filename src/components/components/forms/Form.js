@@ -69,7 +69,7 @@ const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, r
                     </div>
                 }
                 <div className="row justify-content-center">
-                    <div className="col-4">
+                    <div className="col-lg-4 col-12 p-0">
                         <Button
                             external={false}
                             url={null}

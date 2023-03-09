@@ -2,9 +2,9 @@
 @import "~bootstrap/scss/bootstrap";
 
 :root {
-    --bs-body-color: #e0e1dd;
-    --bs-link-color: #e0e1dd;
-    --bs-link-hover-color: #00fffb;
+    --bs-body-color: #131827;
+    --bs-link-color: #131827;
+    --bs-link-hover-color: #1e88e5;
 }
 
 // Layout
@@ -28,5 +28,5 @@
         background-color: $portfolio-rich-black;
     }
     .bg-ylmn-blue {
-        background-color: $portfolio-ylnmn-blue;
+        background-color: $portfolio-dim-grey;
     }

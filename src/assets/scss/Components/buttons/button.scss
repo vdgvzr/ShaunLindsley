@@ -1,10 +1,10 @@
 // Button
 
 .button {
-    color: $portfolio-platinum;
+    color: $portfolio-rich-black;
     border-radius: 50px;
     padding: 10px 20px;
-    border: 2px solid $portfolio-platinum;
+    border: 2px solid $portfolio-rich-black;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -17,11 +17,11 @@
     }
 
     &:hover {
-        border: 2px solid $portfolio-cyan;
-        color: $portfolio-cyan;
+        border: 2px solid $portfolio-blue;
+        color: $portfolio-blue;
 
         svg {
-            fill: $portfolio-cyan !important;
+            fill: $portfolio-blue !important;
         }
     }
 }

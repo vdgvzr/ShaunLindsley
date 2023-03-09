@@ -5,14 +5,14 @@
     // Default input
     .default-input {
         background-color: transparent;
-        border: 1px solid $portfolio-platinum;
+        border: 1px solid $portfolio-rich-black;
         padding: 0.3rem 1rem;
-        color: $portfolio-platinum;
+        color: $portfolio-rich-black;
         border-radius: 0.5rem;
 
         &:focus-visible {
             outline: none;
-            border: 1px solid $portfolio-cyan;
+            border: 1px solid $portfolio-blue;
         }
     }
 

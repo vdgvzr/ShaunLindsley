@@ -18,7 +18,7 @@ const Resume = ({ page }) => {
                             <div className="row">
                                 {page.content[0].skills?.skills.map((skill, i) => {
                                     return(
-                                        <div className="col-2" key={i}>
+                                        <div className="col-lg-2 col-sm-6 col-12" key={i}>
                                             <ProgressRing
                                                 radius={60}
                                                 stroke={4}
@@ -38,7 +38,7 @@ const Resume = ({ page }) => {
                     <div className="row">
                         <div className=" col-12">
                             <div className="row">
-                                <div className="col-12 d-flex justify-content-center">
+                                <div className="col-lg-6 col-12 my-3 my-lg-0 d-flex justify-content-lg-end justify-content-center">
                                     <Button
                                         external={true}
                                         url={page.content[1].resume}
@@ -47,6 +47,8 @@ const Resume = ({ page }) => {
                                         type="button"
                                         icon="External"
                                     />
+                                </div>
+                                <div className="col-lg-6 col-12 my-3 my-lg-0 d-flex justify-content-lg-start justify-content-center">
                                     <Button
                                         external={false}
                                         url={page.content[1].resume}

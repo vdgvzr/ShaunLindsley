@@ -10,7 +10,7 @@ const Button = ({ external, url, buttonText, download, type, icon, submitting })
                 <button disabled={submitting} type={type} className="button">
                     {submitting ? 'Submitting...' : buttonText}
                     {icon
-                    ? <Icon name={icon} color="#e0e1dd" height="30" width="50" />
+                    ? <Icon name={icon} color="#131827" height="30" width="50" />
                     :
                     null
                     }
@@ -27,7 +27,7 @@ const Button = ({ external, url, buttonText, download, type, icon, submitting })
                 >
                     <span>{buttonText}</span>
                     {icon
-                    ? <Icon name={icon} color="#e0e1dd" height="30" width="50" />
+                    ? <Icon name={icon} color="#131827" height="30" width="50" />
                     :
                     null
                     }
