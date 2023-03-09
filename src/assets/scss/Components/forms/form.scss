@@ -1,0 +1,22 @@
+// Form
+
+.default-form {
+
+    // Default input
+    .default-input {
+        background-color: transparent;
+        border: 1px solid $portfolio-platinum;
+        padding: 0.3rem 1rem;
+        color: $portfolio-platinum;
+        border-radius: 0.5rem;
+
+        &:focus-visible {
+            outline: none;
+            border: 1px solid $portfolio-cyan;
+        }
+    }
+
+    input:-internal-autofill-selected {
+        background-color: transparent !important;
+    }
+}

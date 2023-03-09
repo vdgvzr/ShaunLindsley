@@ -5,11 +5,11 @@ import Form from "../../components/forms/Form";
 
 const Contact = ({ page }) => {
     const recaptchaEnabled = page.form[0].recaptchaEnabled;
-
     const [formState, setFormState] = useState({
         name: '',
         email: '',
         message: '',
+        errors: '',
     });
     const [message, setMessage] = useState({
         class: '',
@@ -38,7 +38,7 @@ const Contact = ({ page }) => {
         try {
             await axios.post(formSparkUrl, payload);
             setMessage({
-                class: 'bg-success',
+                class: 'bg-ylmn-blue',
                 text: 'Your message has been submitted'
             })
             setFormState({
@@ -47,11 +47,17 @@ const Contact = ({ page }) => {
                 message: '',
             });
             recaptchaEnabled ?? recaptchaRef.current.reset();
+            setTimeout(() => {
+                setMessage({
+                    class: '',
+                    text: ''
+                })
+            }, 5000);
         } catch(error) {
             console.error(error);
             setMessage({
-                class: 'bg-danger',
-                text: 'Error'
+                class: 'bg-rich-black',
+                text: 'There was an error submitting the form, please try again'
             })
         }
         setSubmitting(false);
@@ -84,10 +90,21 @@ const Contact = ({ page }) => {
                                 textAlign="center"
                                 colWidth="6"
                             />
-                            {message && 
-                                <div className={`my-4 text-white ${message.class}`}>
-                                    {message.text}
+                            <div className="row mb-5 justify-content-center">
+                                <div className="col-8 text-center">
+                                    <h6>{page.text}</h6>
                                 </div>
+                            </div>
+                            {message.text !== ''
+                            ?   
+                                message &&
+                                    <div className="row justify-content-center">
+                                        <div className={`col-6 py-4 my-4 text-white ${message.class} text-center`}>
+                                            {message.text}
+                                        </div>
+                                    </div>
+                            :
+                                null
                             }
                             <div className="row justify-content-center">
                                 <div className="col-6">

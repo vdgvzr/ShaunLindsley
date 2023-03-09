@@ -8,7 +8,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, recaptchaKey, updateRecaptchaToken }) => {
     return(
         <>
-            <form onSubmit={onSubmit}>
+            <form className="default-form" onSubmit={onSubmit}>
                 {form.inputs.map((input, i) => {
                     if (input.type === 'text') {
                         return(
@@ -19,6 +19,7 @@ const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, r
                                         name={input.name}
                                         onChange={onChange}
                                         value={formState.name}
+                                        required={true}
                                     />
                                 </div>
                             </div>
@@ -32,6 +33,7 @@ const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, r
                                         name={input.name}
                                         onChange={onChange}
                                         value={formState.email}
+                                        required={true}
                                     />
                                 </div>
                             </div>
@@ -46,6 +48,7 @@ const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, r
                                         rows="10"
                                         onChange={onChange}
                                         value={formState.message}
+                                        required={true}
                                     />
                                 </div>
                             </div>
@@ -54,19 +57,16 @@ const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, r
                         null
                     }
                 })}
-                {form.recaptchaEnabled
-                ?
-                <div className="row justify-content-center">
-                    <div className="col-4">
-                        <ReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey={recaptchaKey}
-                            onChange={updateRecaptchaToken}
-                        />
+                {form.recaptchaEnabled &&
+                    <div className="row my-3">
+                        <div className="col-12 recaptcha">
+                            <ReCAPTCHA
+                                ref={recaptchaRef}
+                                sitekey={recaptchaKey}
+                                onChange={updateRecaptchaToken}
+                            />
+                        </div>
                     </div>
-                </div>
-                :
-                null
                 }
                 <div className="row justify-content-center">
                     <div className="col-4">
@@ -76,7 +76,7 @@ const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, r
                             buttonText="Submit"
                             download={false}
                             type="submit"
-                            icon="External"
+                            icon="Submit"
                             submitting={submitting}
                         />
                     </div>
