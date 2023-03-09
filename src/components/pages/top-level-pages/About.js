@@ -6,7 +6,7 @@ const About = ({ page }) => {
         <>
             {page.content.map((block, i) => {
                 return(
-                    <div key={i} className="custom-panel">
+                    <div key={i} className="custom-panel container">
                         <div className="container">
                             <div className="row">
                                 <div className=" col-12">

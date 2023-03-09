@@ -18,7 +18,9 @@
 
 // Navbar
 .navbar {
-    --bs-navbar-padding-y: 1.5rem;
+    @include media-breakpoint-up(lg) {
+        --bs-navbar-padding-y: 1.5rem;
+    }
 }
 
 // Background colours

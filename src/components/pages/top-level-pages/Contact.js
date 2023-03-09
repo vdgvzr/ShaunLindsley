@@ -81,7 +81,7 @@ const Contact = ({ page }) => {
 
     return (
         <>
-            <div className="custom-panel contact-form">
+            <div className="custom-panel container contact-form">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">

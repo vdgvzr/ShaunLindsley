@@ -6,7 +6,7 @@ import Header from "../../components/headers/Header";
 const Resume = ({ page }) => {
     return (
         <>
-            <div className="custom-panel">
+            <div className="custom-panel container">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -33,7 +33,7 @@ const Resume = ({ page }) => {
                     </div>
                 </div>
             </div>
-            <div className="custom-panel">
+            <div className="custom-panel container">
                 <div className="container">
                     <div className="row">
                         <div className=" col-12">

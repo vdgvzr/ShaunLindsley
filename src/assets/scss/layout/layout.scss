@@ -18,11 +18,13 @@
     }
 
     #sidebar {
-        height: 100vh;
-        padding: 0 !important;
-        position: sticky;
-        top: 1.5rem;
-        z-index: 10;
+        @include media-breakpoint-up(lg) {
+            height: 100vh;
+            padding: 0 !important;
+            position: sticky;
+            top: 1.5rem;
+            z-index: 10;
+        }
 
         .navbar {
             .navbar-brand {
@@ -82,7 +84,6 @@
 
     #content {
         position: relative;
-        width: 100%;
     }
 
     /* #footer {

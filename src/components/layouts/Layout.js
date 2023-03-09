@@ -7,26 +7,22 @@ const Layout = ({ children, site, contact }) => {
         <div className="wrapper container-fluid">
             <div className="wrapper__blur"></div>
             <div className="row">
-                <div className="col-1">
+                <div className="col-lg-1 col-12">
                     <header id="sidebar" className="">
                         <Nav pages={site?.pages || []} logo={site?.logo} />
                     </header>
                 </div>
-                <div className='col-11'>
-                    <div id="content" className="row">
-                        <div className="col-12">
-                            <main id="main" className="">
-                                {children}
-                            </main>
-                            <footer id="footer" className="footer custom-panel">
-                                <Footer
-                                    pages={site?.pages || []}
-                                    footerText={site?.footerText} 
-                                    contact={contact?.emailAddress}
-                                />
-                            </footer>
-                        </div>
-                    </div>
+                <div id="content" className="col-lg-11 col-12">
+                    <main id="main" className="">
+                        {children}
+                    </main>
+                    <footer id="footer" className="">
+                        <Footer
+                            pages={site?.pages || []}
+                            footerText={site?.footerText} 
+                            contact={contact?.emailAddress}
+                        />
+                    </footer>
                 </div>
             </div>
         </div>
