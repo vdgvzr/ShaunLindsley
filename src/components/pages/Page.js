@@ -7,7 +7,6 @@ import Contact from './top-level-pages/Contact';
 const Page = ({ page }) => {
 
     if (page) {
-
         switch (page?.meta?.type) {
             case 'page':
                 switch (page.title) {

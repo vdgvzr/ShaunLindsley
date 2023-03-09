@@ -1,0 +1,129 @@
+changedFieldIndicator: 764388722
+field: 2ca81d7b-462a-4c47-a08b-55c244961394 # Form
+fieldLayouts:
+  12d2b425-0e75-4c64-8c78-355a9cf7f571:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ae5ca4cd-630a-4a47-a764-9f803b2fd2ec # Inputs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7039e874-aaaf-48ad-9342-3d171598ec53
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ca59c31c-20d1-4a5c-9631-5785f8e8b7ba # Enable Recaptcha
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3b7e414-c013-4cb1-9fb0-e1eb69755041
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 29d11f88-834d-44e9-8a4d-89d89af26e36
+        userCondition: null
+fields:
+  ae5ca4cd-630a-4a47-a764-9f803b2fd2ec: # Inputs
+    columnSuffix: bqtwyftt
+    contentColumnType: text
+    fieldGroup: null
+    handle: inputs
+    instructions: null
+    name: Inputs
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Name
+                -
+                  - handle
+                  - name
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Type
+                -
+                  - handle
+                  - type
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Label
+                -
+                  - handle
+                  - label
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: null
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  ca59c31c-20d1-4a5c-9631-5785f8e8b7ba: # Enable Recaptcha
+    columnSuffix: fubgsqrm
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: enableRecaptcha
+    instructions: null
+    name: 'Enable Recaptcha'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch

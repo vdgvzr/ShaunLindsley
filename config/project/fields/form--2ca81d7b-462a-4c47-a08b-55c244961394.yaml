@@ -1,0 +1,37 @@
+columnSuffix: qavhcagr
+contentColumnType: string
+fieldGroup: 4786f2a6-b9b0-4978-8fcc-323833d5e36f # Common
+handle: form
+instructions: null
+name: Form
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1519848742
+  columns:
+    __assoc__:
+      -
+        - ae5ca4cd-630a-4a47-a764-9f803b2fd2ec # Inputs
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ca59c31c-20d1-4a5c-9631-5785f8e8b7ba # Enable Recaptcha
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_form}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

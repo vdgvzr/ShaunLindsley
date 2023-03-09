@@ -61,6 +61,17 @@ function transformAboutContent(Entry $entry){
     return $bodyBlocks;
 }
 
+function transformForm(Entry $entry) {
+    $fields = [];
+    foreach ($entry->form as $row){
+        $fields[] = [
+            'inputs' => $row->inputs,
+            'recaptchaEnabled' => $row->enableRecaptcha,
+        ];
+    }
+    return($fields);
+}
+
 $pageInfos = [];
 
 return [
@@ -222,6 +233,7 @@ return [
                     return [
                         'title' => $entry->title,
                         'text' => $entry->text->getRawContent(),
+                        'form' => transformForm($entry),
                     ];
                 },
                 'pretty' => true,

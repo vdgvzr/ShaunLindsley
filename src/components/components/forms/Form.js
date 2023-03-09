@@ -5,41 +5,57 @@ import Textarea from "./inputs/Textarea";
 import Button from "../buttons/Button";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Form = ({ onSubmit, onChange, formState, submitting, recaptchaRef, recaptchaKey, updateRecaptchaToken }) => {
+const Form = ({ form, onSubmit, onChange, formState, submitting, recaptchaRef, recaptchaKey, updateRecaptchaToken }) => {
     return(
         <>
             <form onSubmit={onSubmit}>
-                <div className="row justify-content-center">
-                    <div className="col-12">
-                        <Text 
-                            label="Full Name"
-                            name="name"
-                            onChange={onChange}
-                            value={formState.name}
-                        />
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-12">
-                        <Email 
-                            label="Email Address"
-                            name="email"
-                            onChange={onChange}
-                            value={formState.email}
-                        />
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-12">
-                        <Textarea
-                            label="Message"
-                            name="message"
-                            rows="10"
-                            onChange={onChange}
-                            value={formState.message}
-                        />
-                    </div>
-                </div>
+                {form.inputs.map((input, i) => {
+                    if (input.type === 'text') {
+                        return(
+                            <div key={i} className="row justify-content-center mb-3">
+                                <div className="col-12 d-flex flex-column align-items-center">
+                                    <Text 
+                                        label={input.label}
+                                        name={input.name}
+                                        onChange={onChange}
+                                        value={formState.name}
+                                    />
+                                </div>
+                            </div>
+                        )
+                    } else if (input.type === 'email') {
+                        return(
+                            <div key={i} className="row justify-content-center mb-3">
+                                <div className="col-12 d-flex flex-column align-items-center">
+                                    <Email 
+                                        label={input.label}
+                                        name={input.name}
+                                        onChange={onChange}
+                                        value={formState.email}
+                                    />
+                                </div>
+                            </div>
+                        )
+                    } else if (input.type === 'textarea') {
+                        return(
+                            <div key={i} className="row justify-content-center mb-3">
+                                <div className="col-12 d-flex flex-column align-items-center">
+                                    <Textarea
+                                        label={input.label}
+                                        name={input.name}
+                                        rows="10"
+                                        onChange={onChange}
+                                        value={formState.message}
+                                    />
+                                </div>
+                            </div>
+                        )
+                    } else {
+                        null
+                    }
+                })}
+                {form.recaptchaEnabled
+                ?
                 <div className="row justify-content-center">
                     <div className="col-4">
                         <ReCAPTCHA
@@ -49,6 +65,9 @@ const Form = ({ onSubmit, onChange, formState, submitting, recaptchaRef, recaptc
                         />
                     </div>
                 </div>
+                :
+                null
+                }
                 <div className="row justify-content-center">
                     <div className="col-4">
                         <Button

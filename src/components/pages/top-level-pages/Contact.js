@@ -4,16 +4,18 @@ import Header from "../../components/headers/Header";
 import Form from "../../components/forms/Form";
 
 const Contact = ({ page }) => {
+    const recaptchaEnabled = page.form[0].recaptchaEnabled;
+
     const [formState, setFormState] = useState({
         name: '',
         email: '',
         message: '',
     });
-    const [submitting, setSubmitting] = useState(false);
     const [message, setMessage] = useState({
         class: '',
         text: '',
-    })
+    });
+    const [submitting, setSubmitting] = useState(false);
     const [recaptchaToken, setRecaptchaToken] = useState();
 
     const formId = process.env.REACT_APP_FORM_ID;
@@ -30,7 +32,7 @@ const Contact = ({ page }) => {
             name: formState.name,
             email: formState.email,
             message: formState.message,
-            'g-recaptcha-response': recaptchaToken,
+            'g-recaptcha-response':  recaptchaToken,
         };
 
         try {
@@ -44,7 +46,7 @@ const Contact = ({ page }) => {
                 email: '',
                 message: '',
             });
-            recaptchaRef.current.reset();
+            recaptchaEnabled ?? recaptchaRef.current.reset();
         } catch(error) {
             console.error(error);
             setMessage({
@@ -52,7 +54,6 @@ const Contact = ({ page }) => {
                 text: 'Error'
             })
         }
-
         setSubmitting(false);
     }
 
@@ -67,7 +68,9 @@ const Contact = ({ page }) => {
 
     // Reset recaptcha token on submission
     const updateRecaptchaToken = (token) => {
-        setRecaptchaToken(token ?? null);
+        if (recaptchaEnabled) {
+            setRecaptchaToken(token ?? null);
+        }
     }
 
     return (
@@ -89,6 +92,7 @@ const Contact = ({ page }) => {
                             <div className="row justify-content-center">
                                 <div className="col-6">
                                     <Form 
+                                        form={page.form[0]}
                                         onSubmit={submitForm}
                                         onChange={updateFormControl}
                                         formState={formState}

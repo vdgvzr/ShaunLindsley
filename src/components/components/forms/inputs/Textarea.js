@@ -4,7 +4,7 @@ const Textarea = ({ label, name, rows, onChange, value }) => {
     return(
         <>
             <label htmlFor={name}>{label}</label>
-            <textarea id={name} name={name} onChange={onChange} value={value} rows={rows}/>
+            <textarea className="w-100 bg-none" id={name} name={name} onChange={onChange} value={value} rows={rows}/>
         </>
     )
 }
